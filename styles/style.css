@@ -52,18 +52,6 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: 31.25em;
 }
-@media (min-width: 37.5em) {
-  .body {
-    background-position: left -10em top -5em, right -10em bottom -25em;
-    background-size: 37.5em;
-  }
-}
-@media (min-width: 38em) {
-  .body {
-    background-size: 40em;
-    background-position: left -8em top -20em, right -8em bottom -20em
-  }
-}
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -112,6 +100,13 @@ img {
   margin-inline: auto;
   margin-block: 3.25rem;
 }
+.flex-centered {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
 .card {
   background-color: var(--clr-white);
   border-radius: var(--br);
@@ -156,10 +151,26 @@ color: var(--clr-Verydarkdesaturated-blue);
   gap: 2em;
   padding: 1em 0
 }
+.footer {
+position: absolute;
+bottom: 2em;
+}
 .attribution { 
   font-size: 11px; text-align: center; 
 }
 .attribution a {
   color: hsl(228, 45%, 44%); 
 }
-  
+
+@media (min-width: 37.5em) {
+  .body {
+    background-position: left -10em top -5em, right -10em bottom -25em;
+    background-size: 37.5em;
+  }
+}
+@media (min-width: 38em) {
+  .body {
+    background-size: 40em;
+    background-position: left -8em top -20em, right -8em bottom -20em
+  }
+}
