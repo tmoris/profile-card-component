@@ -50,7 +50,6 @@ body {
   overflow: hidden;
 }
 
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -93,6 +92,12 @@ img {
   object-fit: cover;
 }
 
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   width: 100%;
 }
@@ -109,10 +114,10 @@ img {
   align-items: center;
   height: 100vh;
 }
+
 .flex-centered >* {
   width: 100%;
 }
-
 
 .card {
   background-color: var(--clr-white);
@@ -122,10 +127,12 @@ img {
   overflow: hidden;
 
 }
+
 .card-pattern-img {
   border-radius: 1em 1em 0 0;
   width: 100%;
 }
+
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -134,6 +141,7 @@ img {
   flex-wrap: wrap;
   border-bottom: .0625em solid rgb(0 0 0 / 0.1);
 }
+
 .profile-img {
   position: relative;
   top: -3em;
@@ -141,34 +149,43 @@ img {
   border: 0.25em solid var(--clr-white);
   border-radius: 50%;
 }
+
 .name, 
 .stats {
-margin: 0;
-font-size: 1.125rem;
-font-weight: var(--fw-bold);
-line-height: 1.1;
-color: var(--clr-Verydarkdesaturated-blue);
+  display: block;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  color: var(--clr-Verydarkdesaturated-blue);
+  
 }
+
 .text-reg {
   font-weight: var(--fw-reg);
   font-size: 1rem;
   color: var(--clr-Darkgrayish-blue);
 }
+
 .card-stats {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2em;
   padding: 1em 0
+
 }
+
 .footer {
   position: absolute;
   bottom: 2em;
   margin: 0 auto;
 }
+
 .attribution { 
   font-size: 11px; text-align: center; 
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%); 
 }
