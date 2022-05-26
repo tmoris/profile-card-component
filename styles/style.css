@@ -45,13 +45,26 @@ body {
   font-weight: var(--fw-reg);
   line-height: 1.75;
   color: var(--clr-Darkgrayish-blue);
+  overflow: hidden;
 }
-.body {
-  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-  background-position: left -15em top -20em, right -15em bottom -20em;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 31.25em;
+
+body::before {
+content: url(../images/bg-pattern-top.svg);
+position: absolute;
+top: -40em;
+left: -40em;
+z-index: -1;
+transition: 150ms all ease-in-out;
 }
+
+body::after {
+  content: url(../images/bg-pattern-bottom.svg);
+  position: absolute;
+  right: -40em;
+  bottom: -40em;
+  z-index: -1;
+  }
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -87,19 +100,23 @@ h5 {
 small, .text_small {
   font-size: 0.8rem;
 }
+
 img {
   display: block;
   max-width: 100%;
   object-fit: cover;
 }
+
 .main {
   width: 100%;
 }
+
 .container {
   width: min(80%, 46rem);
   margin-inline: auto;
   margin-block: 3.25rem;
 }
+
 .flex-centered {
   display: flex;
   flex-direction: column;
@@ -107,14 +124,18 @@ img {
   align-items: center;
   height: 100vh;
 }
+
 .card {
   background-color: var(--clr-white);
   border-radius: var(--br);
   box-shadow: var(--bs);
-  max-width: 20rem ;
+  max-width: 19rem;
+  overflow: hidden;
+
 }
 .card-pattern-img {
   border-radius: 1em 1em 0 0;
+  width: 100%;
 }
 .profile-section {
   display: flex;
@@ -163,15 +184,37 @@ color: var(--clr-Verydarkdesaturated-blue);
   color: hsl(228, 45%, 44%); 
 }
 
-@media (min-width: 37.5em) {
-  .body {
-    background-position: left -10em top -5em, right -10em bottom -25em;
-    background-size: 37.5em;
+@media (min-width: 43.75em) {
+  body::before {
+    top: -35em;
+    left: -35em;
   }
+    body::after {
+      right: -35em;
+      bottom: -35em;
+      }
 }
-@media (min-width: 38em) {
-  .body {
-    background-size: 40em;
-    background-position: left -8em top -20em, right -8em bottom -20em
-  }
+@media (min-width: 56.25em) {
+  body::before {
+    top: -30em;
+    left: -30em;
+    }
+    
+    body::after {
+      right: -30em;
+      bottom: -30em;
+      }
 }
+@media (min-width: 75em) {
+  body::before {
+    top: -30em;
+    left: -15em;
+    }
+    
+    body::after {
+      right: -15em;
+      bottom: -30em;
+    
+      }
+    }
+
