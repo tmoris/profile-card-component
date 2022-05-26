@@ -124,6 +124,10 @@ img {
   align-items: center;
   height: 100vh;
 }
+.flex-centered >* {
+ width: 100%;
+}
+
 
 .card {
   background-color: var(--clr-white);
